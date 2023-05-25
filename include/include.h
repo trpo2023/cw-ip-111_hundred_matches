@@ -7,5 +7,7 @@
 #include <ctime>
 
 // Custom Libraries
+#include "menu.h"
+#include "game.h"
 
 #endif

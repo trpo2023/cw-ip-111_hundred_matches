@@ -3,6 +3,6 @@
 int main()
 {
     srand(time(0));
-    std::cout<<"Hello TRPO!!!";
+    menu();
     return 0;
 }
