@@ -28,7 +28,7 @@ void menu()
 			menu__Rules();
 			break;
 		case '3':
-			menu__Rules();
+			menu__Authors();
 			break;
 		case 'q':
 		case 'Q':
@@ -50,7 +50,6 @@ void menu__Game()
 				"Выберите режим игры:\n"
 				"1) Игра с компьютером\n"
 				"2) Игра с другим игроком\n"
-				"3) ???\n"
 				"Для выхода из игры введите клавишу \'q\'\n");
 		switch (choose[0])
 		{
