@@ -1,4 +1,4 @@
-#include "menu.h"
+#include "menu.hpp"
 std::string input(const std::string &str)
 {
 	std::cout << str

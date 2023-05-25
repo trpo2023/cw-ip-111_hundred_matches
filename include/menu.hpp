@@ -1,6 +1,6 @@
-#include "include.h"
-#ifndef _MENU_H_
-#define _MENU_H_
+#include "include.hpp"
+#ifndef _MENU_HPP_
+#define _MENU_HPP_
 
 std::string input(const std::string &str);
 

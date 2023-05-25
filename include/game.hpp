@@ -1,6 +1,6 @@
-#include "include.h"
-#ifndef _GAME_H_
-#define _GAME_H_
+#include "include.hpp"
+#ifndef _GAME_HPP_
+#define _GAME_HPP_
 
 void game__Computer();
 void game__Players();
