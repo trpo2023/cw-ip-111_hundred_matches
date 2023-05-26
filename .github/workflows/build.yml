@@ -12,5 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: make
+    - name: make clean
+      run: make clean
+      name: make
       run: make
