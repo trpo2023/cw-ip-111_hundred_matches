@@ -8,11 +8,9 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - name: make clean
+    - name: Clean
       run: make clean
-      name: make
+    - name: Build
       run: make
