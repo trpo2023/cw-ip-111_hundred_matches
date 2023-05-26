@@ -7,10 +7,10 @@
 #include <ctime>
 
 // Кастомные библиотеки
+#include "computer.hpp"
 #include "matches.hpp"
+#include "player.hpp"
 #include "game.hpp"
 #include "menu.hpp"
-#include "player.hpp"
-#include "computer.hpp"
 
 #endif

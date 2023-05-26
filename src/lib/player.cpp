@@ -6,12 +6,12 @@ int player__GetChoice(int matches)
 
     int choice;
     std::cout << "Сколько спичек хотите взять?\n"
-        << "> ";
+              << "> ";
     std::cin >> choice;
 
     while (choice < MIN_MATCHES ||
-        choice > MAX_MATCHES ||
-        choice > matches)
+           choice > MAX_MATCHES ||
+           choice > matches)
     {
         std::cout << "Ошибка! Пожалуйста возьмите спички от 1 до " << std::min(10, matches) << ":\t";
         std::cin >> choice;
@@ -33,7 +33,7 @@ void player__Check(int matches)
     if (matches == 0)
     {
         std::cout << "Поражение! Вы взяли последнюю спичку на столе!\n"
-            << "\nДля продолжения нажмите Enter...\n";
+                  << "\nДля продолжения нажмите Enter...\n";
         std::cin.ignore().get();
         game__End();
     }
@@ -52,8 +52,8 @@ void player__Check(int matches, std::string playerName)
     if (matches == 0)
     {
         std::cout << "Поражение! Игрок " << playerName
-            << " взял последнюю спичку на столе!\n"
-            << "\nДля продолжения нажмите Enter...\n";
+                  << " взял последнюю спичку на столе!\n"
+                  << "\nДля продолжения нажмите Enter...\n";
         std::cin.ignore().get();
         game__End();
     }
@@ -62,7 +62,7 @@ void player__Check(int matches, std::string playerName)
 void player__Change()
 {
     std::cout << "\nВаш ход закончен!\n"
-        << "Передайте управление другому игроку.\n"
-        << "\nДля продолжения нажмите Enter...\n";
+              << "Передайте управление другому игроку.\n"
+              << "\nДля продолжения нажмите Enter...\n";
     std::cin.ignore().get();
 }
