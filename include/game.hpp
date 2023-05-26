@@ -5,5 +5,6 @@
 void game__Computer();
 void game__Players();
 void game__Secret();
+void game__End();
 
 #endif
