@@ -10,5 +10,7 @@
 #include "matches.hpp"
 #include "game.hpp"
 #include "menu.hpp"
+#include "player.hpp"
+#include "computer.hpp"
 
 #endif
