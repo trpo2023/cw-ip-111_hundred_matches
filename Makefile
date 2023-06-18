@@ -26,7 +26,7 @@ test_sources = $(shell find test/ -name '*.cpp')
 test_objects = $(test_sources:test/%.cpp=obj/test/%.o)
 
 .PHONY: all
-all: $(APP_PATH)
+all: create_dirs $(APP_PATH) 
 
 -include $(DEPS)
 
@@ -37,16 +37,26 @@ $(LIB_PATH): $(LIB_OBJECTS)
 	ar rcs $@ $^
 
 $(OBJ_DIR)/%.o: %.cpp
-	$(PP) -c $(CPPFLAGS) -I thirdparty $< -o $@
+	$(PP) -c $(CPPFLAGS) $< -o $@
+
+create_dirs:
+	mkdir -p bin/
+	mkdir -p obj/src/main/
+	mkdir -p obj/src/lib/
+	touch create_dirs
 
 .PHONY: clean
 clean:
-	$(RM) $(APP_PATH) $(LIB_PATH) $(test_path)
-	find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
-	find $(OBJ_DIR) -name '*.d' -exec $(RM) '{}' \;
+	rm -f create_dirs
+	rm -rf obj/
+	rm -rf bin/
 
 .PHONY: test
-test: $(test_path)
+test: create_test_dir $(test_path)
+
+create_test_dir:
+	mkdir -p obj/test/
+	touch create_dirs
 
 $(test_path): $(test_objects) $(LIB_PATH)
-	$(PP) $(CFLAGS) -I thirdparty $(CPPFLAGS) $^ -o $@
+	$(PP) $(CFLAGS) $(CPPFLAGS) $^ -o $@
