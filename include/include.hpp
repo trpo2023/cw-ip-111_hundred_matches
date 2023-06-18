@@ -1,3 +1,4 @@
+#pragma once
 #ifndef _INCLUDE_HPP_
 #define _INCLUDE_HPP_
 
@@ -12,5 +13,8 @@
 #include "player.hpp"
 #include "game.hpp"
 #include "menu.hpp"
+
+// Библиотеки для тестов
+#include <ctest.h>
 
 #endif

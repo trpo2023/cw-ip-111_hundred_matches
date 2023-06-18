@@ -48,17 +48,20 @@ void game__Secret()
 
 void game__End()
 {
+	bool flag = true;
 	system("clear");
-	while (true)
+	while (flag)
 	{
 		std::string choose = input("\nЖелаете начать новую игру? (y|n)");
 		switch (choose[0])
 		{
 		case 'y':
 			menu__Game();
+			flag = false;
 			break;
 		case 'n':
 			menu();
+			flag = false;
 			break;
 		default:
 			std::cout << "\nОшибка! Такого выбора нет в списке.\n"

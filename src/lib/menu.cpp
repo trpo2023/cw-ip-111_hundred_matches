@@ -98,4 +98,5 @@ void menu__Quit()
 						<< "Всего вам хорошего!\n"
 						<< "\nДля продолжения нажмите Enter...\n";
 	std::cin.ignore().get();
+	return;
 }
